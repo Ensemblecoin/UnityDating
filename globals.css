@@ -1,0 +1,177 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
+  --ring: 0 0% 83.1%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.landing-nav-button,
+.landing-primary-button,
+.landing-secondary-button {
+  appearance: none;
+  align-items: center;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.landing-nav-button {
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(164, 130, 214, 0.28);
+  color: hsl(var(--foreground));
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1;
+  min-height: 2.25rem;
+  min-width: max-content;
+  padding: 0.6rem 0.9rem;
+  white-space: nowrap !important;
+}
+
+.landing-nav-button:hover,
+.landing-nav-button:focus-visible {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(116, 73, 174, 0.45);
+  box-shadow: 0 10px 24px rgba(111, 68, 160, 0.12);
+  color: hsl(var(--foreground));
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.landing-nav-cta {
+  background: #211629;
+  border-color: #211629;
+  color: #fff7ff;
+}
+
+.landing-nav-cta:hover,
+.landing-nav-cta:focus-visible {
+  background: #31203d;
+  border-color: #31203d;
+  color: #fff7ff;
+}
+
+.landing-primary-button,
+.landing-secondary-button {
+  font-size: 1.05rem;
+  font-weight: 750;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.6rem;
+}
+
+.landing-primary-button {
+  background: #211629;
+  border: 1px solid #211629;
+  box-shadow: 0 18px 34px rgba(82, 48, 128, 0.24);
+  color: #fff7ff;
+}
+
+.landing-primary-button:hover,
+.landing-primary-button:focus-visible {
+  background: #31203d;
+  border-color: #31203d;
+  box-shadow: 0 22px 42px rgba(82, 48, 128, 0.32);
+  color: #fff7ff;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.landing-secondary-button {
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(82, 48, 128, 0.32);
+  box-shadow: 0 12px 26px rgba(82, 48, 128, 0.1);
+  color: #211629;
+}
+
+.landing-secondary-button:hover,
+.landing-secondary-button:focus-visible {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(82, 48, 128, 0.48);
+  box-shadow: 0 18px 34px rgba(82, 48, 128, 0.16);
+  color: #211629;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.landing-primary-button:disabled,
+.landing-secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+}
+
+@media (max-width: 720px) {
+  .landing-nav-button {
+    font-size: 0.82rem;
+    min-height: 2rem;
+    padding: 0.45rem 0.65rem;
+  }
+}

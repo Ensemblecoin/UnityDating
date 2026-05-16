@@ -1,0 +1,39 @@
+{
+  "name": "unity-dating-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "node .next/standalone/server.js",
+    "start:railway": "node .next/standalone/server.js",
+    "start:standalone": "node .next/standalone/server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "2.1.8",
+    "@radix-ui/react-select": "2.2.6",
+    "@radix-ui/react-slot": "1.2.4",
+    "@tailwindcss/postcss": "4.3.0",
+    "@types/pg": "^8.20.0",
+    "@vercel/analytics": "2.0.1",
+    "autoprefixer": "10.5.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "^0.400.0",
+    "next": "16.2.6",
+    "pg": "^8.20.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "tailwind-merge": "2.6.1",
+    "tailwindcss": "4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.41",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.5.18",
+    "typescript": "5.9.3"
+  }
+}

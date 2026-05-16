@@ -1,0 +1,54 @@
+runConfig:
+  minInstances: 0
+  maxInstances: 10
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 1024
+
+env:
+  - variable: NEXT_PUBLIC_APP_URL
+    value: https://unitydating.net
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_PI_SANDBOX
+    value: "false"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_PI_BASIC_AMOUNT
+    value: "1"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_PI_PREMIUM_AMOUNT
+    value: "2"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_PI_ELITE_AMOUNT
+    value: "3"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: NEXT_PUBLIC_DEMO_MODE
+    value: "false"
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: DATABASE_SSL
+    value: "true"
+    availability:
+      - RUNTIME
+  - variable: AUTH_SECRET
+    secret: AUTH_SECRET
+    availability:
+      - RUNTIME
+  - variable: DATABASE_URL
+    secret: DATABASE_URL
+    availability:
+      - RUNTIME
+  - variable: PI_SERVER_API_KEY
+    secret: PI_SERVER_API_KEY
+    availability:
+      - RUNTIME

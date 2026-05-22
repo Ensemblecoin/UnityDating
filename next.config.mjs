@@ -4,7 +4,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://sdk.minepi.com https://va.vercel-scripts.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://sdk.minepi.com https://va.vercel-scripts.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://placehold.co https://flagcdn.com",
       "font-src 'self' data:",

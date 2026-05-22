@@ -36,7 +36,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Analytics />
-        <Script src="https://sdk.minepi.com/pi-sdk.js" strategy="afterInteractive" />
+        <Script src="https://sdk.minepi.com/pi-sdk.js" strategy="beforeInteractive" />
       </body>
     </html>
   )

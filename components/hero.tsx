@@ -14,7 +14,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background">
+    <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background border-b border-border">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -27,14 +27,16 @@ export default function Hero() {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
             <div className="mb-8 flex justify-center lg:justify-start">
-              <Image
-                src="/Unity Transparent Logo.png"
-                alt="Unity Dating Logo - Colorful heart-shaped spade filled with international flags"
-                width={200}
-                height={233}
-                priority
-                className="h-auto w-[200px] drop-shadow-2xl"
-              />
+              <div className="rounded-2xl border border-purple-200/60 bg-white/10 p-4 shadow-lg backdrop-blur-sm">
+                <Image
+                  src="/Unity Transparent Logo.png"
+                  alt="Unity Dating Logo - Colorful heart-shaped spade filled with international flags"
+                  width={200}
+                  height={233}
+                  priority
+                  className="h-auto w-[200px] drop-shadow-2xl"
+                />
+              </div>
             </div>
             
             <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
@@ -85,7 +87,7 @@ export default function Hero() {
 
           {/* Right Column - Featured Image */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl border-2 border-purple-200/50 shadow-2xl shadow-purple-500/20">
               <Image 
                 src="/Couple listening to music.png" 
                 alt="Romantic couple sharing headphones listening to music together"
@@ -101,10 +103,10 @@ export default function Hero() {
       </div>
 
       {/* Features Section */}
-      <div className="border-t border-border bg-card/30 py-16">
+      <div className="border-t-2 border-border bg-card/30 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="flex flex-col items-center text-center rounded-xl border border-border bg-background/60 p-6 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Music className="h-12 w-12 text-primary" />
               </div>
@@ -112,7 +114,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Our algorithm connects you based on shared musical tastes and preferences</p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center rounded-xl border border-border bg-background/60 p-6 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Globe className="h-12 w-12 text-primary" />
               </div>
@@ -120,7 +122,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Break barriers and discover love beyond borders with our global community</p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center rounded-xl border border-border bg-background/60 p-6 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Heart className="h-12 w-12 text-primary" />
               </div>

@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node .next/standalone/server.js",
-    "start:railway": "node .next/standalone/server.js",
-    "start:standalone": "node .next/standalone/server.js",
+    "start": "node server.js",
+    "start:railway": "node server.js",
+    "start:standalone": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {

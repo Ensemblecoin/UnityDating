@@ -66,29 +66,3 @@ body {
   color: hsl(var(--foreground));
 }
 
-@layer utilities {
-  /* Section separators */
-  .section-divider {
-    @apply border-t-2 border-gray-200;
-  }
-
-  /* Card with standard border treatment */
-  .card-bordered {
-    @apply rounded-xl border-2 border-gray-200 shadow-md;
-  }
-
-  /* Subtle inset panel (form fields, tag groups) */
-  .panel-inset {
-    @apply rounded-lg border border-gray-200 bg-gray-50 p-4;
-  }
-
-  /* Consistent section padding */
-  .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
-  }
-
-  /* Hover border highlight */
-  .hover-border-accent {
-    @apply transition-colors hover:border-purple-300;
-  }
-}

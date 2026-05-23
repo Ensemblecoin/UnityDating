@@ -54,7 +54,7 @@ export default function VirtualMusicRoom() {
   }
 
   return (
-    <section id="virtual-music-room" className="border-t border-border bg-gradient-to-b from-background to-secondary py-20">
+    <section id="virtual-music-room" className="border-t-2 border-border bg-gradient-to-b from-background to-secondary py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <h2 className="mb-4 font-serif text-4xl font-bold text-foreground sm:text-5xl">
@@ -68,7 +68,7 @@ export default function VirtualMusicRoom() {
         {/* Video Chat Demo */}
         <div className="mb-12 grid gap-6 md:grid-cols-2">
           {/* Main Video */}
-          <Card className="relative overflow-hidden bg-card p-0">
+          <Card className="relative overflow-hidden rounded-xl border-2 border-border bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-purple-900/50 to-purple-600/30">
               <img 
                 src="https://placehold.co/800x600?text=Your+Video+Feed+showing+you+in+video+chat+with+warm+lighting+and+friendly+smile"
@@ -89,7 +89,7 @@ export default function VirtualMusicRoom() {
           </Card>
 
           {/* Partner Video */}
-          <Card className="relative overflow-hidden bg-card p-0">
+          <Card className="relative overflow-hidden rounded-xl border-2 border-border bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-pink-900/50 to-pink-600/30">
               <img 
                 src="https://placehold.co/800x600?text=Partner+Video+Feed+showing+international+friend+smiling+in+conversation+natural+setting"
@@ -112,7 +112,7 @@ export default function VirtualMusicRoom() {
 
         {/* Control Bar */}
         <div className="mb-12 flex justify-center">
-          <Card className="inline-flex items-center gap-3 p-4">
+          <Card className="inline-flex items-center gap-3 rounded-xl border-2 border-border p-4 shadow-md">
             <Button
               size="lg"
               variant={isVideoOn ? "default" : "destructive"}
@@ -241,38 +241,38 @@ export default function VirtualMusicRoom() {
 
         {/* Features List */}
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Card className="p-6 text-center">
+          <Card className="rounded-xl border-2 border-border p-6 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Video className="h-8 w-8 text-primary" />
               </div>
             </div>
             <h3 className="mb-2 text-xl font-bold text-foreground">HD Video Chat</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed">
               Crystal clear video quality for meaningful face-to-face connections
             </p>
           </Card>
 
-          <Card className="p-6 text-center">
+          <Card className="rounded-xl border-2 border-border p-6 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Languages className="h-8 w-8 text-primary" />
               </div>
             </div>
             <h3 className="mb-2 text-xl font-bold text-foreground">AI Real-Time Translation</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed">
               Speak your language while AI translates instantly for your partner
             </p>
           </Card>
 
-          <Card className="p-6 text-center">
+          <Card className="rounded-xl border-2 border-border p-6 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Music className="h-8 w-8 text-primary" />
               </div>
             </div>
             <h3 className="mb-2 text-xl font-bold text-foreground">Synchronized Playlist</h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed">
               Share and listen to music together in perfect sync
             </p>
           </Card>

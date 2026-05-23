@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="border-t border-border bg-gradient-to-b from-background to-secondary py-20">
+    <section id="testimonials" className="border-t-2 border-border bg-gradient-to-b from-background to-secondary py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="mb-4 font-serif text-4xl font-bold text-foreground sm:text-5xl">
@@ -39,7 +39,7 @@ export default function Testimonials() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="overflow-hidden border-2 border-border shadow-xl transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+            <Card key={index} className="overflow-hidden rounded-xl border-2 border-border bg-card shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20">
               <div className="relative h-96 overflow-hidden bg-muted">
                 <img
                   src={testimonial.image || "/placeholder.svg"}
@@ -50,10 +50,10 @@ export default function Testimonials() {
               </div>
               <CardContent className="relative p-6">
                 <Quote className="absolute -top-3 left-6 h-8 w-8 text-primary opacity-20" />
-                <p className="mb-4 italic text-muted-foreground">
+                <p className="mb-4 italic text-muted-foreground leading-relaxed">
                   {testimonial.quote}
                 </p>
-                <div className="border-t border-border pt-4">
+                <div className="border-t-2 border-border pt-4">
                   <p className="font-bold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.countries}</p>
                 </div>

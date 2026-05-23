@@ -43,7 +43,7 @@ const features = [
 
 export default function FeaturesShowcase() {
   return (
-    <section id="features-showcase" className="bg-background py-20">
+    <section id="features-showcase" className="border-t-2 border-border bg-background py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="mb-4 font-serif text-4xl font-bold text-foreground sm:text-5xl">
@@ -54,25 +54,24 @@ export default function FeaturesShowcase() {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-lg transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+                className="group relative overflow-hidden rounded-2xl border-2 border-border bg-card p-8 shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20"
               >
                 <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
                 <Icon className={`mb-4 h-12 w-12 ${feature.color}`} />
                 <h3 className="mb-3 text-xl font-bold text-foreground">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             )
           })}
         </div>
-
 
       </div>
     </section>

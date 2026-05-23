@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             <div className="mb-8 flex justify-center lg:justify-start">
               <Image
-                src="/unity-logo.png"
+                src="/Unity Transparent Logo.png"
                 alt="Unity Dating Logo - Colorful heart-shaped spade filled with international flags"
                 width={200}
                 height={233}
@@ -87,7 +87,7 @@ export default function Hero() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <Image 
-                src="/couple-music.jpg" 
+                src="/Couple listening to music.png" 
                 alt="Romantic couple sharing headphones listening to music together"
                 width={600}
                 height={800}

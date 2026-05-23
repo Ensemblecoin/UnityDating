@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex flex-col items-center gap-3">
             <Image
-              src="/unity-logo.png"
+              src="/Unity Transparent Logo.png"
               alt="Unity Dating Logo"
               width={80}
               height={93}

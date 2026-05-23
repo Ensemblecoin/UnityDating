@@ -8,19 +8,19 @@ const testimonials = [
     name: "Sofia & James",
     countries: "Brazil & USA",
     quote: "We bonded over our love for jazz and now we're planning our wedding in Rio. Music brought us together across 5,000 miles.",
-    image: "/testimonial-sofia-james.jpg"
+    image: "/James and Sofia.png"
   },
   {
     name: "Yuki & Marco",
     countries: "Japan & Italy",
     quote: "From Tokyo to Rome, our shared passion for classical music created an unbreakable bond. Unity Dating made the impossible possible.",
-    image: "/testimonial-yuki-marco.jpg"
+    image: "/Yuki and Marco.png"
   },
   {
     name: "Amara & Lucas",
     countries: "Kenya & France",
     quote: "We discovered we both loved Afrobeat and French pop. Now we're creating our own musical fusion and building a life together.",
-    image: "/testimonial-amara-lucas.jpg"
+    image: "/Amara & Lucas.png"
   }
 ]
 

@@ -44,10 +44,10 @@ export default function MatchCard({ match }: MatchCardProps) {
   }
 
   return (
-    <Card className="overflow-hidden rounded-xl border-2 border-border shadow-md shadow-primary/10 transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/30">
+    <Card className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-md shadow-primary/10 transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/30">
       <CardContent className="space-y-4 p-6">
         <div className="flex items-center justify-center">
-          <div className="rounded-lg border border-border p-2 shadow-sm">
+          <div className="rounded-lg border border-gray-200 p-2 shadow-sm">
             <img
               src={`https://flagcdn.com/w80/${match.countryCode}.png`}
               alt={`Flag of ${match.countryName}`}
@@ -61,7 +61,7 @@ export default function MatchCard({ match }: MatchCardProps) {
           <p className="italic text-muted-foreground">{match.countryName}</p>
         </div>
 
-        <div className="rounded-lg border border-border bg-muted/30 p-3">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
           <p className="mb-2 text-sm font-semibold text-foreground">
             Music Genres:
           </p>
@@ -74,7 +74,7 @@ export default function MatchCard({ match }: MatchCardProps) {
           </div>
         </div>
 
-        <div className="rounded-lg border border-border bg-muted/30 p-3">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
           <p className="mb-2 text-sm font-semibold text-foreground">
             Languages:
           </p>
@@ -88,12 +88,12 @@ export default function MatchCard({ match }: MatchCardProps) {
         </div>
 
         <div className="flex justify-center pt-2">
-          <div className="rounded-full border border-border bg-accent px-4 py-2 font-bold text-accent-foreground shadow-md">
+          <div className="rounded-full border border-gray-200 bg-accent px-4 py-2 font-bold text-accent-foreground shadow-md">
             Match Score: {match.score}
           </div>
         </div>
 
-        <div className="flex gap-2 border-t border-border pt-4">
+        <div className="flex gap-2 border-t border-gray-200 pt-4">
           <Button
             onClick={handleLike}
             variant={isLiked ? "default" : "outline"}

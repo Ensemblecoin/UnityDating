@@ -14,7 +14,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background border-b border-border">
+    <section id="hero" className="relative overflow-hidden bg-gradient-to-br from-background via-secondary to-background border-b border-gray-200">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -66,7 +66,7 @@ export default function Hero() {
               </Button>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
+            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-gray-200 pt-8">
               <div className="flex flex-col items-center lg:items-start">
                 <Music className="mb-2 h-8 w-8 text-primary" />
                 <p className="text-sm font-semibold text-foreground">Musical</p>
@@ -103,10 +103,10 @@ export default function Hero() {
       </div>
 
       {/* Features Section */}
-      <div className="border-t-2 border-border bg-card/30 py-16">
+      <div className="border-t-2 border-gray-200 bg-card/30 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center rounded-xl border border-border bg-background/60 p-6 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-6 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Music className="h-12 w-12 text-primary" />
               </div>
@@ -114,7 +114,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Our algorithm connects you based on shared musical tastes and preferences</p>
             </div>
             
-            <div className="flex flex-col items-center text-center rounded-xl border border-border bg-background/60 p-6 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-6 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Globe className="h-12 w-12 text-primary" />
               </div>
@@ -122,7 +122,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Break barriers and discover love beyond borders with our global community</p>
             </div>
             
-            <div className="flex flex-col items-center text-center rounded-xl border border-border bg-background/60 p-6 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-6 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Heart className="h-12 w-12 text-primary" />
               </div>

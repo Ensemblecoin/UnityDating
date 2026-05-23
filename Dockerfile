@@ -12,9 +12,9 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Copy Next standalone output and static assets
-COPY --from=builder /app/.next/standalone ./.next/standalone
-COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone .
+COPY --from=builder /app/.next/static ./.next/standalone/public/_next/static
+COPY --from=builder /app/public ./.next/standalone/public
 COPY --from=builder /app/package.json ./
 
 EXPOSE 3000

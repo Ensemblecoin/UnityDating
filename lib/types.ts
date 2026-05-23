@@ -1,19 +1,17 @@
 export interface UserProfile {
-  id: string
+  id?: string
   name: string
-  age: number
-  location: string
-  favoriteGenres: string[]
-  bio: string
-  image?: string
+  countryCode: string
+  countryName: string
+  musicGenres: string[]
+  languages: string[]
 }
 
-export interface Match {
-  id: string
+export interface Match extends UserProfile {
+  score: number
+}
+
+export interface Country {
+  code: string
   name: string
-  age: number
-  location: string
-  favoriteGenres: string[]
-  compatibility: number
-  image?: string
 }

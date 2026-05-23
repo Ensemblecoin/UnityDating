@@ -132,8 +132,8 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
   }
 
   return (
-    <Card id="profile-form" className="mx-auto max-w-2xl rounded-xl border-2 border-border shadow-xl shadow-primary/20">
-      <CardHeader className="border-b-2 border-border pb-6">
+    <Card id="profile-form" className="mx-auto max-w-2xl rounded-xl border-2 border-gray-200 shadow-xl shadow-primary/20">
+      <CardHeader className="border-b-2 border-gray-200 pb-6">
         <CardTitle className="text-center text-3xl text-primary">
           Create Your Profile
         </CardTitle>
@@ -143,7 +143,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
       </CardHeader>
       <CardContent className="pt-6">
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="space-y-2 rounded-lg border border-border bg-muted/20 p-4">
+          <div className="space-y-2 rounded-lg border border-gray-200 bg-gray-50 p-4">
             <Label htmlFor="name">Name</Label>
             <Input
               id="name"
@@ -152,11 +152,11 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="border-border focus:border-primary"
+              className="border-gray-200 focus:border-primary"
             />
           </div>
 
-          <div className="space-y-2 relative z-10 rounded-lg border border-border bg-muted/20 p-4">
+          <div className="space-y-2 relative z-10 rounded-lg border border-gray-200 bg-gray-50 p-4">
             <Label htmlFor="country">Country</Label>
             <Select value={countryCode} onValueChange={setCountryCode} required>
               <SelectTrigger id="country">
@@ -172,7 +172,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
             </Select>
           </div>
 
-          <div className="space-y-2 relative z-0 rounded-lg border border-border bg-muted/20 p-4">
+          <div className="space-y-2 relative z-0 rounded-lg border border-gray-200 bg-gray-50 p-4">
             <Label>Favorite Music Genres</Label>
             <p className="text-sm text-muted-foreground">
               Select all genres you enjoy
@@ -199,7 +199,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
                       "hover:scale-105 active:scale-95",
                       isSelected
                         ? "bg-primary text-primary-foreground shadow-lg ring-2 ring-primary ring-offset-2"
-                        : "bg-card text-foreground border-2 border-border hover:bg-primary/20 hover:border-primary"
+                        : "bg-card text-foreground border-2 border-gray-200 hover:bg-primary/20 hover:border-primary"
                     )}
                     aria-pressed={isSelected}
                     aria-label={`${genre} ${isSelected ? 'selected' : 'not selected'}`}
@@ -211,7 +211,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
             </div>
           </div>
 
-          <div className="space-y-2 rounded-lg border border-border bg-muted/20 p-4">
+          <div className="space-y-2 rounded-lg border border-gray-200 bg-gray-50 p-4">
             <Label>Languages Spoken</Label>
             <p className="text-sm text-muted-foreground">
               Select all languages you speak
@@ -238,7 +238,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
                       "hover:scale-105 active:scale-95",
                       isSelected
                         ? "bg-primary text-primary-foreground shadow-lg ring-2 ring-primary ring-offset-2"
-                        : "bg-card text-foreground border-2 border-border hover:bg-primary/20 hover:border-primary"
+                        : "bg-card text-foreground border-2 border-gray-200 hover:bg-primary/20 hover:border-primary"
                     )}
                     aria-pressed={isSelected}
                     aria-label={`${language} ${isSelected ? 'selected' : 'not selected'}`}

@@ -137,3 +137,31 @@ body {
   animation: shimmer 3s linear infinite;
 }
 
+/* Testimonials */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 79, 139, 0); }
+  50%       { box-shadow: 0 0 24px 4px rgba(255, 79, 139, 0.25); }
+}
+
+@keyframes border-spin {
+  from { --border-angle: 0deg; }
+  to   { --border-angle: 360deg; }
+}
+
+.animate-count-up {
+  animation: count-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.testimonial-card:hover .match-badge {
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+

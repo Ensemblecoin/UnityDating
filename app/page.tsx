@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Header from "@/components/header"
 import Hero from "@/components/hero"
+import HowItWorks from "@/components/how-it-works"
 import FeaturesShowcase from "@/components/features-showcase"
 import VirtualMusicRoom from "@/components/virtual-music-room"
 import ProfileForm from "@/components/profile-form"
@@ -28,6 +29,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <HowItWorks />
         <FeaturesShowcase />
         <VirtualMusicRoom />
         <div className="relative bg-gradient-to-b from-secondary via-background to-secondary py-32">

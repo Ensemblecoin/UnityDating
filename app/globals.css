@@ -93,6 +93,21 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes step-enter {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes step-exit {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-32px); }
+}
+
+@keyframes step-enter-back {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
 .animate-wave-bar {
   animation: wave-bar 1.2s ease-in-out infinite;
 }
@@ -107,6 +122,14 @@ body {
 
 .animate-fade-up {
   animation: fade-up 0.7s ease-out both;
+}
+
+.animate-step-enter {
+  animation: step-enter 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-step-enter-back {
+  animation: step-enter-back 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .animate-shimmer {

@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Video, VideoOff, Mic, MicOff, Music, Languages, Share2, X, Play, Pause, Lock } from "lucide-react"
+import { Video, VideoOff, Mic, MicOff, Music, Languages, Share2, X, Play, Pause, Lock, Sparkles } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { useToast } from "@/hooks/use-toast"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal"
+import FloatingParticles from "@/components/floating-particles"
 
 export default function VirtualMusicRoom() {
   const [isVideoOn, setIsVideoOn] = useState(true)
@@ -15,6 +17,7 @@ export default function VirtualMusicRoom() {
   const [currentSong, setCurrentSong] = useState("")
   const [subscriptionLevel, setSubscriptionLevel] = useState("basic")
   const { toast } = useToast()
+  const { ref: sectionRef, isVisible } = useScrollReveal<HTMLElement>(0.1)
 
   useEffect(() => {
     const subscription = localStorage.getItem("unity_subscription") || "basic"
@@ -54,11 +57,63 @@ export default function VirtualMusicRoom() {
   }
 
   return (
-    <section id="virtual-music-room" className="border-t-2 border-gray-200 bg-gradient-to-b from-background to-secondary py-32">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mb-16 text-center">
+    <section
+      id="virtual-music-room"
+      ref={sectionRef}
+      className="relative overflow-hidden border-t-2 border-gray-200 bg-gradient-to-b from-background to-secondary py-32"
+    >
+      {/* ── Floating particles ── */}
+      <FloatingParticles
+        count={8}
+        symbols={["♪", "♫", "♬", "✦"]}
+        className="opacity-20"
+        zIndex={0}
+      />
+
+      {/* ── Background orbs ── */}
+      <div
+        className="pointer-events-none absolute -top-32 right-0 h-80 w-80 rounded-full opacity-10 blur-3xl animate-breathe"
+        style={{ background: "radial-gradient(circle, #7c3aed, transparent)" }}
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        {/* ── Section header ── */}
+        <div
+          className="mb-16 text-center"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(28px)",
+            transition: "opacity 0.65s ease, transform 0.65s ease",
+          }}
+        >
+          {/* Eyebrow */}
+          <div className="mb-5 flex justify-center">
+            <span
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
+              style={{
+                borderColor: "rgba(14,165,233,0.35)",
+                background: "rgba(14,165,233,0.08)",
+                color: "#0ea5e9",
+              }}
+            >
+              <Sparkles className="h-3 w-3" />
+              Live Feature
+            </span>
+          </div>
+
           <h2 className="mb-6 font-serif text-4xl font-bold text-foreground sm:text-5xl">
-            Virtual Music Room
+            Virtual{" "}
+            <span
+              className="animate-shimmer"
+              style={{
+                background: "linear-gradient(90deg, #ff4f8b, #7c3aed, #ff4f8b)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundSize: "200% auto",
+              }}
+            >
+              Music Room
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Connect face-to-face with AI translation and share your favorite music in real-time
@@ -242,41 +297,66 @@ export default function VirtualMusicRoom() {
 
         {/* Features List */}
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          <Card className="rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
-            <div className="mb-4 flex justify-center">
-              <div className="rounded-full bg-primary/10 p-4">
-                <Video className="h-8 w-8 text-primary" />
-              </div>
-            </div>
-            <h3 className="mb-2 text-xl font-bold text-foreground">HD Video Chat</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Crystal clear video quality for meaningful face-to-face connections
-            </p>
-          </Card>
+          {[
+            {
+              icon: Video,
+              title: "HD Video Chat",
+              desc: "Crystal clear video quality for meaningful face-to-face connections",
+              delay: "0s",
+              glowColor: "rgba(124,58,237,0.2)",
+            },
+            {
+              icon: Languages,
+              title: "AI Real-Time Translation",
+              desc: "Speak your language while AI translates instantly for your partner",
+              delay: "0.1s",
+              glowColor: "rgba(14,165,233,0.2)",
+            },
+            {
+              icon: Music,
+              title: "Synchronized Playlist",
+              desc: "Share and listen to music together in perfect sync",
+              delay: "0.2s",
+              glowColor: "rgba(255,79,139,0.2)",
+            },
+          ].map(({ icon: Icon, title, desc, delay, glowColor }, i) => (
+            <Card
+              key={title}
+              className="group relative overflow-hidden rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all duration-300 hover:scale-[1.04] hover:border-purple-300 hover:shadow-xl card-shimmer"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? "translateY(0)" : "translateY(32px)",
+                transition: `opacity 0.6s ease ${delay}, transform 0.6s ease ${delay}`,
+              }}
+            >
+              {/* Hover glow */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ background: `radial-gradient(circle at 50% 0%, ${glowColor} 0%, transparent 70%)` }}
+              />
 
-          <Card className="rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
-            <div className="mb-4 flex justify-center">
-              <div className="rounded-full bg-primary/10 p-4">
-                <Languages className="h-8 w-8 text-primary" />
+              <div className="mb-4 flex justify-center">
+                <div className="relative rounded-full bg-primary/10 p-4 transition-transform duration-300 group-hover:scale-110">
+                  {/* Icon glow */}
+                  <div
+                    className="absolute inset-0 rounded-full blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-500"
+                    style={{ background: glowColor }}
+                  />
+                  <Icon className="relative h-8 w-8 text-primary transition-transform duration-300 group-hover:-rotate-6" />
+                </div>
               </div>
-            </div>
-            <h3 className="mb-2 text-xl font-bold text-foreground">AI Real-Time Translation</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Speak your language while AI translates instantly for your partner
-            </p>
-          </Card>
+              <h3 className="mb-2 text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                {title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">{desc}</p>
 
-          <Card className="rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
-            <div className="mb-4 flex justify-center">
-              <div className="rounded-full bg-primary/10 p-4">
-                <Music className="h-8 w-8 text-primary" />
-              </div>
-            </div>
-            <h3 className="mb-2 text-xl font-bold text-foreground">Synchronized Playlist</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Share and listen to music together in perfect sync
-            </p>
-          </Card>
+              {/* Animated bottom accent */}
+              <div
+                className="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-500 rounded-b-3xl"
+                style={{ background: "linear-gradient(90deg, #ff4f8b, #7c3aed)" }}
+              />
+            </Card>
+          ))}
         </div>
       </div>
     </section>

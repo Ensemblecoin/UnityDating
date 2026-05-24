@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Music, Heart, Globe, Headphones, Radio, Star } from "lucide-react"
 import { useRouter } from "next/navigation"
+import FloatingParticles from "@/components/floating-particles"
 
 /* ─── Animated music-wave bar ─────────────────────────────────────────────── */
 function WaveBar({ delay = "0s", height = "h-4" }: { delay?: string; height?: string }) {
@@ -170,6 +171,19 @@ export default function Hero() {
           "radial-gradient(circle at top left, #ff4f8b 0%, #7c3aed 45%, #101827 100%)",
       }}
     >
+      {/* ── Animated gradient overlay ── */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-30 animate-gradient-shift"
+        style={{
+          background:
+            "linear-gradient(135deg, #ff4f8b, #7c3aed, #0ea5e9, #ff4f8b)",
+          backgroundSize: "300% 300%",
+        }}
+      />
+
+      {/* ── Floating music note particles ── */}
+      <FloatingParticles count={22} zIndex={1} />
+
       {/* ── Subtle music-wave pattern overlay ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.07]">
         {[...Array(8)].map((_, i) => (
@@ -189,12 +203,17 @@ export default function Hero() {
 
       {/* ── Radial glow orbs ── */}
       <div
-        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full opacity-30 blur-3xl"
+        className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full opacity-30 blur-3xl animate-breathe"
         style={{ background: "#ff4f8b" }}
       />
       <div
-        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full opacity-10 blur-3xl"
-        style={{ background: "#7c3aed" }}
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full opacity-10 blur-3xl animate-breathe"
+        style={{ background: "#7c3aed", animationDelay: "1.5s" }}
+      />
+      {/* ── Extra accent orb ── */}
+      <div
+        className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full opacity-20 blur-3xl animate-breathe"
+        style={{ background: "#0ea5e9", animationDelay: "0.75s" }}
       />
 
       {/* ── Main content ── */}
@@ -268,18 +287,28 @@ export default function Hero() {
             >
               <button
                 onClick={scrollToForm}
-                className="group relative inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-pink-500/40"
+                className="group relative ripple-container btn-press inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-base font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-pink-500/40 animate-pulse-glow"
                 style={{ background: "linear-gradient(90deg, #ff4f8b, #7c3aed)" }}
               >
-                <Heart className="h-5 w-5 transition-transform group-hover:scale-125" />
+                <Heart className="h-5 w-5 transition-transform group-hover:scale-125 group-hover:rotate-12" />
                 Create Free Profile
+                {/* Shimmer sweep */}
+                <span className="pointer-events-none absolute inset-0 rounded-full overflow-hidden">
+                  <span
+                    className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background:
+                        "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.18) 50%, transparent 60%)",
+                    }}
+                  />
+                </span>
               </button>
 
               <button
                 onClick={() => router.push("/music-room")}
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:border-white/50"
+                className="group ripple-container btn-press inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:border-white/50 hover:shadow-lg hover:shadow-purple-500/20"
               >
-                <Radio className="h-5 w-5" />
+                <Radio className="h-5 w-5 transition-transform group-hover:rotate-12" />
                 Explore Music Room
               </button>
             </div>
@@ -305,6 +334,13 @@ export default function Hero() {
                   <p className="text-white text-sm font-semibold">10,000+ couples</p>
                   <p className="text-white/60 text-xs">matched worldwide</p>
                 </div>
+                {/* Animated badge */}
+                <span
+                  className="ml-1 rounded-full px-2 py-0.5 text-[10px] font-bold text-white animate-bounce-gentle"
+                  style={{ background: "rgba(255,79,139,0.35)" }}
+                >
+                  ↑ Growing
+                </span>
               </div>
 
               {/* Divider */}
@@ -368,11 +404,11 @@ export default function Hero() {
             ].map(({ icon: Icon, label, desc, delay }) => (
               <div
                 key={label}
-                className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-sm transition-all hover:bg-white/10 animate-fade-up"
+                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/25 hover:scale-[1.03] hover:shadow-lg hover:shadow-pink-500/10 card-shimmer animate-fade-up"
                 style={{ animationDelay: delay }}
               >
                 <div
-                  className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl shadow-lg"
+                  className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6"
                   style={{ background: "linear-gradient(135deg, #ff4f8b, #7c3aed)" }}
                 >
                   <Icon className="h-5 w-5 text-white" />

@@ -11,6 +11,7 @@ import MatchesSection from "@/components/matches-section"
 import Testimonials from "@/components/testimonials"
 import CTASection from "@/components/cta-section"
 import Footer from "@/components/footer"
+import FloatingParticles from "@/components/floating-particles"
 import type { UserProfile, Match } from "@/lib/types"
 
 export default function Home() {
@@ -32,13 +33,46 @@ export default function Home() {
         <HowItWorks />
         <FeaturesShowcase />
         <VirtualMusicRoom />
-        <div className="relative bg-gradient-to-b from-secondary via-background to-secondary py-32">
+        <div className="relative overflow-hidden bg-gradient-to-b from-secondary via-background to-secondary py-32">
+          {/* Animated grid overlay */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTg3NmJjIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')]"></div>
           </div>
-          <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12">
+
+          {/* Floating particles */}
+          <FloatingParticles
+            count={10}
+            symbols={["♪", "♫", "❤", "✦"]}
+            className="opacity-25"
+            zIndex={0}
+          />
+
+          {/* Background orbs */}
+          <div
+            className="pointer-events-none absolute -top-20 left-1/4 h-64 w-64 rounded-full opacity-15 blur-3xl animate-breathe"
+            style={{ background: "radial-gradient(circle, #7c3aed, transparent)" }}
+          />
+          <div
+            className="pointer-events-none absolute -bottom-20 right-1/4 h-64 w-64 rounded-full opacity-15 blur-3xl animate-breathe"
+            style={{ background: "radial-gradient(circle, #ff4f8b, transparent)", animationDelay: "1s" }}
+          />
+
+          <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12" style={{ zIndex: 1 }}>
             <div className="mb-16 text-center">
-              <h2 className="mb-6 font-serif text-4xl font-bold text-foreground">Start Your Love Story</h2>
+              <h2 className="mb-6 font-serif text-4xl font-bold text-foreground">
+                Start Your{" "}
+                <span
+                  className="animate-shimmer"
+                  style={{
+                    background: "linear-gradient(90deg, #ff4f8b, #7c3aed, #ff4f8b)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundSize: "200% auto",
+                  }}
+                >
+                  Love Story
+                </span>
+              </h2>
               <p className="text-lg text-muted-foreground">Fill out your profile and discover your musical soulmate</p>
             </div>
             <ProfileForm onMatchesFound={handleMatchesFound} />

@@ -11,9 +11,9 @@ export default function Footer() {
             <Image
               src="/Unity Transparent Logo.png"
               alt="Unity Dating Logo"
-              width={80}
-              height={93}
-              className="h-auto w-[80px]"
+              width={60}
+              height={70}
+              className="h-auto w-[60px]"
             />
           </div>
           <p className="text-center text-sm text-muted-foreground mt-2">

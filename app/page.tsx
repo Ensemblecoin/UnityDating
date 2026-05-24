@@ -30,13 +30,13 @@ export default function Home() {
         <Hero />
         <FeaturesShowcase />
         <VirtualMusicRoom />
-        <div className="relative bg-gradient-to-b from-secondary via-background to-secondary py-20">
+        <div className="relative bg-gradient-to-b from-secondary via-background to-secondary py-32">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTg3NmJjIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')]"></div>
           </div>
-          <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
-              <h2 className="mb-4 font-serif text-4xl font-bold text-foreground">Start Your Love Story</h2>
+          <div className="relative mx-auto max-w-4xl px-6 sm:px-8 lg:px-12">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 font-serif text-4xl font-bold text-foreground">Start Your Love Story</h2>
               <p className="text-lg text-muted-foreground">Fill out your profile and discover your musical soulmate</p>
             </div>
             <ProfileForm onMatchesFound={handleMatchesFound} />

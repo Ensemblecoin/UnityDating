@@ -22,12 +22,12 @@ export default function Hero() {
         }}></div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl px-6 py-32 sm:px-8 lg:px-12">
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
-            <div className="mb-8 flex justify-center lg:justify-start">
-              <div className="rounded-2xl border border-purple-200/60 bg-white/10 p-4 shadow-lg backdrop-blur-sm">
+            <div className="mb-10 flex justify-center lg:justify-start">
+              <div className="rounded-2xl border border-purple-200/60 bg-white/10 p-6 shadow-lg backdrop-blur-sm">
                 <Image
                   src="/Unity Transparent Logo.png"
                   alt="Unity Dating Logo - Colorful heart-shaped spade filled with international flags"
@@ -39,12 +39,12 @@ export default function Hero() {
               </div>
             </div>
             
-            <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="mb-8 font-serif text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               Where Love
               <span className="block text-primary">Unites Borders</span>
             </h1>
             
-            <p className="mb-8 text-xl leading-relaxed text-muted-foreground sm:text-2xl">
+            <p className="mb-10 text-xl leading-relaxed text-muted-foreground sm:text-2xl">
               Connect with passionate music lovers across the globe. Share melodies, discover harmony, and find your perfect match.
             </p>
 
@@ -52,7 +52,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 onClick={scrollToForm}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-semibold shadow-xl shadow-primary/30"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 text-lg font-semibold shadow-xl shadow-primary/30"
               >
                 Start Your Journey
               </Button>
@@ -60,25 +60,25 @@ export default function Hero() {
                 size="lg" 
                 variant="outline"
                 onClick={scrollToFeatures}
-                className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-6 text-lg font-semibold bg-transparent"
+                className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-semibold bg-transparent"
               >
                 Learn More
               </Button>
             </div>
 
-            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-gray-200 pt-8">
+            <div className="mt-14 grid grid-cols-3 gap-8 border-t border-gray-200 pt-10">
               <div className="flex flex-col items-center lg:items-start">
-                <Music className="mb-2 h-8 w-8 text-primary" />
+                <Music className="mb-3 h-8 w-8 text-primary" />
                 <p className="text-sm font-semibold text-foreground">Musical</p>
                 <p className="text-xs text-muted-foreground">Chemistry</p>
               </div>
               <div className="flex flex-col items-center lg:items-start">
-                <Globe className="mb-2 h-8 w-8 text-primary" />
+                <Globe className="mb-3 h-8 w-8 text-primary" />
                 <p className="text-sm font-semibold text-foreground">Global</p>
                 <p className="text-xs text-muted-foreground">Connections</p>
               </div>
               <div className="flex flex-col items-center lg:items-start">
-                <Heart className="mb-2 h-8 w-8 text-primary" />
+                <Heart className="mb-3 h-8 w-8 text-primary" />
                 <p className="text-sm font-semibold text-foreground">Authentic</p>
                 <p className="text-xs text-muted-foreground">Relationships</p>
               </div>
@@ -103,10 +103,10 @@ export default function Hero() {
       </div>
 
       {/* Features Section */}
-      <div className="border-t-2 border-gray-200 bg-card/30 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-6 shadow-sm">
+      <div className="border-t-2 border-gray-200 bg-card/30 py-20">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-8 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Music className="h-12 w-12 text-primary" />
               </div>
@@ -114,7 +114,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Our algorithm connects you based on shared musical tastes and preferences</p>
             </div>
             
-            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-6 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-8 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Globe className="h-12 w-12 text-primary" />
               </div>
@@ -122,7 +122,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Break barriers and discover love beyond borders with our global community</p>
             </div>
             
-            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-6 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-8 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Heart className="h-12 w-12 text-primary" />
               </div>

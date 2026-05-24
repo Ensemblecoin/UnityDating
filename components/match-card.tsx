@@ -45,7 +45,7 @@ export default function MatchCard({ match }: MatchCardProps) {
 
   return (
     <Card className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-md shadow-primary/10 transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/30">
-      <CardContent className="space-y-4 p-6">
+      <CardContent className="space-y-5 p-8">
         <div className="flex items-center justify-center">
           <div className="rounded-lg border border-gray-200 p-2 shadow-sm">
             <img
@@ -61,8 +61,8 @@ export default function MatchCard({ match }: MatchCardProps) {
           <p className="italic text-muted-foreground">{match.countryName}</p>
         </div>
 
-        <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
-          <p className="mb-2 text-sm font-semibold text-foreground">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p className="mb-3 text-sm font-semibold text-foreground">
             Music Genres:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -74,8 +74,8 @@ export default function MatchCard({ match }: MatchCardProps) {
           </div>
         </div>
 
-        <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
-          <p className="mb-2 text-sm font-semibold text-foreground">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <p className="mb-3 text-sm font-semibold text-foreground">
             Languages:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -87,13 +87,13 @@ export default function MatchCard({ match }: MatchCardProps) {
           </div>
         </div>
 
-        <div className="flex justify-center pt-2">
-          <div className="rounded-full border border-gray-200 bg-accent px-4 py-2 font-bold text-accent-foreground shadow-md">
+        <div className="flex justify-center pt-3">
+          <div className="rounded-full border border-gray-200 bg-accent px-6 py-3 font-bold text-accent-foreground shadow-md">
             Match Score: {match.score}
           </div>
         </div>
 
-        <div className="flex gap-2 border-t border-gray-200 pt-4">
+        <div className="flex gap-3 border-t border-gray-200 pt-5">
           <Button
             onClick={handleLike}
             variant={isLiked ? "default" : "outline"}

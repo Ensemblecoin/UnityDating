@@ -31,10 +31,10 @@ export default function Hero() {
                 <Image
                   src="/Unity Transparent Logo.png"
                   alt="Unity Dating Logo - Colorful heart-shaped spade filled with international flags"
-                  width={200}
-                  height={233}
+                  width={140}
+                  height={163}
                   priority
-                  className="h-auto w-[200px] drop-shadow-2xl"
+                  className="h-auto w-[140px] drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -91,8 +91,8 @@ export default function Hero() {
               <Image 
                 src="/Couple listening to music.png" 
                 alt="Romantic couple sharing headphones listening to music together"
-                width={600}
-                height={800}
+                width={450}
+                height={600}
                 className="h-full w-full object-cover"
                 priority
               />

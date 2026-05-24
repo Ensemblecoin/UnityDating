@@ -19,9 +19,9 @@ export default function Header() {
           <Image
             src="/Unity Transparent Logo.png"
             alt="Unity Dating Logo"
-            width={50}
-            height={58}
-            className="h-auto w-[50px]"
+            width={40}
+            height={46}
+            className="h-auto w-[40px]"
           />
           <span className="text-2xl font-bold text-primary">UNITY</span>
         </Link>

@@ -71,7 +71,7 @@ export default function VirtualMusicRoom() {
           <Card className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-purple-900/50 to-purple-600/30">
               <img 
-                src="https://placehold.co/800x600?text=Your+Video+Feed+showing+you+in+video+chat+with+warm+lighting+and+friendly+smile"
+                src="https://placehold.co/560x315?text=Your+Video+Feed+showing+you+in+video+chat+with+warm+lighting+and+friendly+smile"
                 alt="Your Video Feed showing you in video chat with warm lighting and friendly smile"
                 className="h-full w-full object-cover"
               />
@@ -92,7 +92,7 @@ export default function VirtualMusicRoom() {
           <Card className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-pink-900/50 to-pink-600/30">
               <img 
-                src="https://placehold.co/800x600?text=Partner+Video+Feed+showing+international+friend+smiling+in+conversation+natural+setting"
+                src="https://placehold.co/560x315?text=Partner+Video+Feed+showing+international+friend+smiling+in+conversation+natural+setting"
                 alt="Partner Video Feed showing international friend smiling in conversation natural setting"
                 className="h-full w-full object-cover"
               />

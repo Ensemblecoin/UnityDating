@@ -54,10 +54,10 @@ export default function VirtualMusicRoom() {
   }
 
   return (
-    <section id="virtual-music-room" className="border-t-2 border-gray-200 bg-gradient-to-b from-background to-secondary py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 font-serif text-4xl font-bold text-foreground sm:text-5xl">
+    <section id="virtual-music-room" className="border-t-2 border-gray-200 bg-gradient-to-b from-background to-secondary py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="mb-16 text-center">
+          <h2 className="mb-6 font-serif text-4xl font-bold text-foreground sm:text-5xl">
             Virtual Music Room
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -66,7 +66,7 @@ export default function VirtualMusicRoom() {
         </div>
 
         {/* Video Chat Demo */}
-        <div className="mb-12 grid gap-6 md:grid-cols-2">
+        <div className="mb-14 grid gap-8 md:grid-cols-2">
           {/* Main Video */}
           <Card className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-purple-900/50 to-purple-600/30">
@@ -111,8 +111,8 @@ export default function VirtualMusicRoom() {
         </div>
 
         {/* Control Bar */}
-        <div className="mb-12 flex justify-center">
-          <Card className="inline-flex items-center gap-3 rounded-xl border-2 border-gray-200 p-4 shadow-md">
+        <div className="mb-14 flex justify-center">
+          <Card className="inline-flex items-center gap-4 rounded-xl border-2 border-gray-200 p-6 shadow-md">
             <Button
               size="lg"
               variant={isVideoOn ? "default" : "destructive"}
@@ -161,8 +161,8 @@ export default function VirtualMusicRoom() {
 
         {/* Playlist Sharing Panel */}
         {isPlaylistOpen && (
-          <Card className="border-2 border-primary p-6">
-            <div className="mb-4 flex items-center justify-between">
+          <Card className="border-2 border-primary p-8">
+            <div className="mb-6 flex items-center justify-between">
               <h3 className="text-2xl font-bold text-foreground">Share Your Music</h3>
               <Button
                 variant="ghost"
@@ -173,7 +173,7 @@ export default function VirtualMusicRoom() {
               </Button>
             </div>
             
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-3">
               {mockPlaylists.map((playlist) => (
                 <Card key={playlist.id} className="overflow-hidden transition-all hover:scale-105">
                   <div className="relative h-40 bg-gradient-to-br from-primary/20 to-accent/20">
@@ -186,9 +186,9 @@ export default function VirtualMusicRoom() {
                       <Music className="h-16 w-16 text-primary" />
                     </div>
                   </div>
-                  <div className="p-4">
-                    <h4 className="mb-1 font-bold text-foreground">{playlist.title}</h4>
-                    <p className="mb-2 text-sm text-muted-foreground">{playlist.artist}</p>
+                  <div className="p-5">
+                    <h4 className="mb-2 font-bold text-foreground">{playlist.title}</h4>
+                    <p className="mb-3 text-sm text-muted-foreground">{playlist.artist}</p>
                     <div className="flex items-center justify-between">
                       <Badge variant="secondary">{playlist.songs} songs</Badge>
                       <Button 
@@ -215,7 +215,7 @@ export default function VirtualMusicRoom() {
             </div>
 
             {currentSong && (
-              <div className="mt-6 rounded-lg border border-primary bg-primary/5 p-4">
+              <div className="mt-8 rounded-lg border border-primary bg-primary/5 p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Button size="sm" variant="default">
@@ -240,8 +240,8 @@ export default function VirtualMusicRoom() {
         )}
 
         {/* Features List */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Card className="rounded-xl border-2 border-gray-200 p-6 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <Card className="rounded-xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Video className="h-8 w-8 text-primary" />
@@ -253,7 +253,7 @@ export default function VirtualMusicRoom() {
             </p>
           </Card>
 
-          <Card className="rounded-xl border-2 border-gray-200 p-6 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
+          <Card className="rounded-xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Languages className="h-8 w-8 text-primary" />
@@ -265,7 +265,7 @@ export default function VirtualMusicRoom() {
             </p>
           </Card>
 
-          <Card className="rounded-xl border-2 border-gray-200 p-6 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
+          <Card className="rounded-xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Music className="h-8 w-8 text-primary" />

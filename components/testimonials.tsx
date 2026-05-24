@@ -26,10 +26,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="border-t-2 border-gray-200 bg-gradient-to-b from-background to-secondary py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 font-serif text-4xl font-bold text-foreground sm:text-5xl">
+    <section id="testimonials" className="border-t-2 border-gray-200 bg-gradient-to-b from-background to-secondary py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="mb-20 text-center">
+          <h2 className="mb-6 font-serif text-4xl font-bold text-foreground sm:text-5xl">
             Love Stories That Inspire
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
@@ -37,7 +37,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="overflow-hidden rounded-xl border-2 border-gray-200 bg-card shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20">
               <div className="relative h-96 overflow-hidden bg-muted">
@@ -48,12 +48,12 @@ export default function Testimonials() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent"></div>
               </div>
-              <CardContent className="relative p-6">
-                <Quote className="absolute -top-3 left-6 h-8 w-8 text-primary opacity-20" />
-                <p className="mb-4 italic text-muted-foreground leading-relaxed">
+              <CardContent className="relative p-8">
+                <Quote className="absolute -top-3 left-8 h-8 w-8 text-primary opacity-20" />
+                <p className="mb-6 italic text-muted-foreground leading-relaxed">
                   {testimonial.quote}
                 </p>
-                <div className="border-t-2 border-gray-200 pt-4">
+                <div className="border-t-2 border-gray-200 pt-5">
                   <p className="font-bold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.countries}</p>
                 </div>

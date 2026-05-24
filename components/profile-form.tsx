@@ -133,17 +133,17 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
 
   return (
     <Card id="profile-form" className="mx-auto max-w-2xl rounded-xl border-2 border-gray-200 shadow-xl shadow-primary/20">
-      <CardHeader className="border-b-2 border-gray-200 pb-6">
+      <CardHeader className="border-b-2 border-gray-200 px-8 pb-8 pt-8">
         <CardTitle className="text-center text-3xl text-primary">
           Create Your Profile
         </CardTitle>
-        <CardDescription className="text-center">
+        <CardDescription className="text-center mt-2">
           Tell us about yourself and find your perfect music-loving match
         </CardDescription>
       </CardHeader>
-      <CardContent className="pt-6">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="space-y-2 rounded-lg border border-gray-200 bg-gray-50 p-4">
+      <CardContent className="px-8 pt-8 pb-8">
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="space-y-3 rounded-lg border border-gray-200 bg-gray-50 p-6">
             <Label htmlFor="name">Name</Label>
             <Input
               id="name"
@@ -156,7 +156,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
             />
           </div>
 
-          <div className="space-y-2 relative z-10 rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <div className="space-y-3 relative z-10 rounded-lg border border-gray-200 bg-gray-50 p-6">
             <Label htmlFor="country">Country</Label>
             <Select value={countryCode} onValueChange={setCountryCode} required>
               <SelectTrigger id="country">
@@ -172,7 +172,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
             </Select>
           </div>
 
-          <div className="space-y-2 relative z-0 rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <div className="space-y-3 relative z-0 rounded-lg border border-gray-200 bg-gray-50 p-6">
             <Label>Favorite Music Genres</Label>
             <p className="text-sm text-muted-foreground">
               Select all genres you enjoy
@@ -211,7 +211,7 @@ export default function ProfileForm({ onMatchesFound }: ProfileFormProps) {
             </div>
           </div>
 
-          <div className="space-y-2 rounded-lg border border-gray-200 bg-gray-50 p-4">
+          <div className="space-y-3 rounded-lg border border-gray-200 bg-gray-50 p-6">
             <Label>Languages Spoken</Label>
             <p className="text-sm text-muted-foreground">
               Select all languages you speak

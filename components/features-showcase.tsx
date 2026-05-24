@@ -43,10 +43,10 @@ const features = [
 
 export default function FeaturesShowcase() {
   return (
-    <section id="features-showcase" className="border-t-2 border-gray-200 bg-background py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 font-serif text-4xl font-bold text-foreground sm:text-5xl">
+    <section id="features-showcase" className="border-t-2 border-gray-200 bg-background py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="mb-20 text-center">
+          <h2 className="mb-6 font-serif text-4xl font-bold text-foreground sm:text-5xl">
             Why Choose Unity Dating
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
@@ -54,7 +54,7 @@ export default function FeaturesShowcase() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (

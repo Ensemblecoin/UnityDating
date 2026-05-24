@@ -13,22 +13,22 @@ export default function CTASection() {
   }
 
   return (
-    <section className="relative overflow-hidden border-y-2 border-gray-200 bg-gradient-to-r from-primary/20 via-secondary to-primary/20 py-20">
+    <section className="relative overflow-hidden border-y-2 border-gray-200 bg-gradient-to-r from-primary/20 via-secondary to-primary/20 py-32">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(139,92,246,0.1),transparent_50%)]"></div>
       </div>
       
-      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <div className="mb-8 flex justify-center gap-4">
+      <div className="relative mx-auto max-w-4xl px-6 text-center sm:px-8 lg:px-12">
+        <div className="mb-10 flex justify-center gap-6">
           <Heart className="h-16 w-16 animate-pulse text-primary" />
           <Music className="h-16 w-16 animate-pulse text-primary delay-150" />
         </div>
         
-        <h2 className="mb-6 font-serif text-4xl font-bold text-foreground sm:text-5xl">
+        <h2 className="mb-8 font-serif text-4xl font-bold text-foreground sm:text-5xl">
           Your Musical Soulmate Awaits
         </h2>
         
-        <p className="mb-8 text-xl text-muted-foreground">
+        <p className="mb-10 text-xl text-muted-foreground">
           Join thousands of music lovers who have found their perfect harmony. 
           Start your journey to love today.
         </p>
@@ -51,7 +51,7 @@ export default function CTASection() {
           </Button>
         </div>
         
-        <div className="mt-12 flex flex-col items-center gap-2 rounded-xl border border-gray-200/60 bg-background/30 px-8 py-6 backdrop-blur-sm sm:flex-row sm:justify-center sm:gap-8">
+        <div className="mt-14 flex flex-col items-center gap-4 rounded-xl border border-gray-200/60 bg-background/30 px-10 py-8 backdrop-blur-sm sm:flex-row sm:justify-center sm:gap-10">
           <div className="flex items-center gap-2">
             <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

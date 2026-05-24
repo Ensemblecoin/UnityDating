@@ -28,36 +28,43 @@ export default function Header() {
         <nav className="flex items-center gap-8">
           <button
             onClick={() => window.location.pathname === '/' ? window.scrollTo({ top: 0, behavior: "smooth" }) : router.push('/')}
-            className="font-semibold text-foreground transition-colors hover:text-primary focus:text-primary"
+            className="link-underline font-semibold text-foreground transition-colors hover:text-primary focus:text-primary"
           >
             Home
           </button>
           <Link
             href="/music-room"
-            className="font-semibold text-foreground transition-colors hover:text-primary"
+            className="link-underline font-semibold text-foreground transition-colors hover:text-primary"
           >
             Music Room
           </Link>
           <Link
             href="/find-match"
-            className="font-semibold text-foreground transition-colors hover:text-primary"
+            className="link-underline font-semibold text-foreground transition-colors hover:text-primary"
           >
             Find Match
           </Link>
           <button
             onClick={() => scrollToSection("testimonials")}
-            className="font-semibold text-foreground transition-colors hover:text-primary"
+            className="link-underline font-semibold text-foreground transition-colors hover:text-primary"
           >
             Stories
           </button>
-          <Button 
-            variant="default" 
-            size="sm"
+          <button
             onClick={() => router.push('/signin')}
-            className="ml-6 px-6 py-2"
+            className="group relative ripple-container btn-press ml-6 inline-flex items-center justify-center rounded-full px-6 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-pink-500/30"
+            style={{ background: "linear-gradient(90deg, #ff4f8b, #7c3aed)" }}
           >
             Sign In
-          </Button>
+            <span className="pointer-events-none absolute inset-0 rounded-full overflow-hidden">
+              <span
+                className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.18) 50%, transparent 60%)",
+                }}
+              />
+            </span>
+          </button>
         </nav>
       </div>
     </header>

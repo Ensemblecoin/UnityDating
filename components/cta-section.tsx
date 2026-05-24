@@ -37,7 +37,7 @@ export default function CTASection() {
           <Button 
             size="lg" 
             onClick={scrollToForm}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 text-xl font-bold shadow-2xl shadow-primary/40"
+            className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 text-xl font-bold shadow-2xl shadow-primary/40"
           >
             Join Unity Dating
           </Button>
@@ -45,13 +45,13 @@ export default function CTASection() {
             size="lg" 
             variant="outline"
             onClick={scrollToTestimonials}
-            className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-xl font-semibold bg-transparent"
+            className="rounded-full border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-xl font-semibold bg-transparent"
           >
             View Success Stories
           </Button>
         </div>
         
-        <div className="mt-14 flex flex-col items-center gap-4 rounded-xl border border-gray-200/60 bg-background/30 px-10 py-8 backdrop-blur-sm sm:flex-row sm:justify-center sm:gap-10">
+        <div className="mt-14 flex flex-col items-center gap-4 rounded-2xl border border-gray-200/60 bg-background/30 px-10 py-8 backdrop-blur-sm sm:flex-row sm:justify-center sm:gap-10">
           <div className="flex items-center gap-2">
             <svg className="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

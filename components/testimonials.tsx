@@ -39,7 +39,7 @@ export default function Testimonials() {
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="overflow-hidden rounded-xl border-2 border-gray-200 bg-card shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20">
+            <Card key={index} className="overflow-hidden rounded-3xl border-2 border-gray-200 bg-card shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20">
               <div className="relative h-64 overflow-hidden bg-muted">
                 <img
                   src={testimonial.image || "/placeholder.svg"}

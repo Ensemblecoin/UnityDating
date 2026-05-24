@@ -60,7 +60,7 @@ export default function FeaturesShowcase() {
             return (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl border-2 border-gray-200 bg-card p-8 shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20"
+                className="group relative overflow-hidden rounded-3xl border-2 border-gray-200 bg-card p-8 shadow-md transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/20"
               >
                 <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-primary/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
                 <Icon className={`mb-4 h-12 w-12 ${feature.color}`} />

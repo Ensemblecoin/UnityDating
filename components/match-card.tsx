@@ -44,10 +44,10 @@ export default function MatchCard({ match }: MatchCardProps) {
   }
 
   return (
-    <Card className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-md shadow-primary/10 transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/30">
+    <Card className="overflow-hidden rounded-3xl border-2 border-gray-200 shadow-md shadow-primary/10 transition-all hover:scale-105 hover:border-purple-300 hover:shadow-xl hover:shadow-primary/30">
       <CardContent className="space-y-5 p-8">
         <div className="flex items-center justify-center">
-          <div className="rounded-lg border border-gray-200 p-2 shadow-sm">
+          <div className="rounded-2xl border border-gray-200 p-2 shadow-sm">
             <img
               src={`https://flagcdn.com/w80/${match.countryCode}.png`}
               alt={`Flag of ${match.countryName}`}
@@ -61,7 +61,7 @@ export default function MatchCard({ match }: MatchCardProps) {
           <p className="italic text-muted-foreground">{match.countryName}</p>
         </div>
 
-        <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+        <div className="rounded-2xl border border-gray-200 bg-gray-50 p-4">
           <p className="mb-3 text-sm font-semibold text-foreground">
             Music Genres:
           </p>
@@ -74,7 +74,7 @@ export default function MatchCard({ match }: MatchCardProps) {
           </div>
         </div>
 
-        <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+        <div className="rounded-2xl border border-gray-200 bg-gray-50 p-4">
           <p className="mb-3 text-sm font-semibold text-foreground">
             Languages:
           </p>
@@ -98,7 +98,7 @@ export default function MatchCard({ match }: MatchCardProps) {
             onClick={handleLike}
             variant={isLiked ? "default" : "outline"}
             size="sm"
-            className="flex-1 bg-transparent"
+            className="flex-1 rounded-full bg-transparent"
           >
             <Heart className={`mr-1 h-4 w-4 ${isLiked ? "fill-current" : ""}`} />
             Like
@@ -107,7 +107,7 @@ export default function MatchCard({ match }: MatchCardProps) {
             onClick={handleConnect}
             variant="default"
             size="sm"
-            className="flex-1"
+            className="flex-1 rounded-full"
           >
             <MessageCircle className="mr-1 h-4 w-4" />
             Connect
@@ -116,7 +116,7 @@ export default function MatchCard({ match }: MatchCardProps) {
             onClick={handleVideoCall}
             variant="outline"
             size="sm"
-            className="flex-1 bg-transparent"
+            className="flex-1 rounded-full bg-transparent"
           >
             <Video className="mr-1 h-4 w-4" />
             Video

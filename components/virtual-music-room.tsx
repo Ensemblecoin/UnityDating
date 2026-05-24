@@ -68,7 +68,7 @@ export default function VirtualMusicRoom() {
         {/* Video Chat Demo */}
         <div className="mb-14 grid gap-8 md:grid-cols-2">
           {/* Main Video */}
-          <Card className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-card p-0 shadow-md">
+          <Card className="relative overflow-hidden rounded-3xl border-2 border-gray-200 bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-purple-900/50 to-purple-600/30">
               <img 
                 src="https://placehold.co/560x315?text=Your+Video+Feed+showing+you+in+video+chat+with+warm+lighting+and+friendly+smile"
@@ -89,7 +89,7 @@ export default function VirtualMusicRoom() {
           </Card>
 
           {/* Partner Video */}
-          <Card className="relative overflow-hidden rounded-xl border-2 border-gray-200 bg-card p-0 shadow-md">
+          <Card className="relative overflow-hidden rounded-3xl border-2 border-gray-200 bg-card p-0 shadow-md">
             <div className="relative aspect-video bg-gradient-to-br from-pink-900/50 to-pink-600/30">
               <img 
                 src="https://placehold.co/560x315?text=Partner+Video+Feed+showing+international+friend+smiling+in+conversation+natural+setting"
@@ -112,7 +112,7 @@ export default function VirtualMusicRoom() {
 
         {/* Control Bar */}
         <div className="mb-14 flex justify-center">
-          <Card className="inline-flex items-center gap-4 rounded-xl border-2 border-gray-200 p-6 shadow-md">
+          <Card className="inline-flex items-center gap-4 rounded-3xl border-2 border-gray-200 p-6 shadow-md">
             <Button
               size="lg"
               variant={isVideoOn ? "default" : "destructive"}
@@ -192,7 +192,8 @@ export default function VirtualMusicRoom() {
                     <div className="flex items-center justify-between">
                       <Badge variant="secondary">{playlist.songs} songs</Badge>
                       <Button 
-                        size="sm" 
+                        size="sm"
+                        className="rounded-full"
                         onClick={() => handleSharePlaylist(playlist.title)}
                         disabled={!canSharePlaylist}
                       >
@@ -241,7 +242,7 @@ export default function VirtualMusicRoom() {
 
         {/* Features List */}
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          <Card className="rounded-xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
+          <Card className="rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Video className="h-8 w-8 text-primary" />
@@ -253,7 +254,7 @@ export default function VirtualMusicRoom() {
             </p>
           </Card>
 
-          <Card className="rounded-xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
+          <Card className="rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Languages className="h-8 w-8 text-primary" />
@@ -265,7 +266,7 @@ export default function VirtualMusicRoom() {
             </p>
           </Card>
 
-          <Card className="rounded-xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
+          <Card className="rounded-3xl border-2 border-gray-200 p-8 text-center shadow-md transition-all hover:border-purple-300 hover:shadow-lg">
             <div className="mb-4 flex justify-center">
               <div className="rounded-full bg-primary/10 p-4">
                 <Music className="h-8 w-8 text-primary" />

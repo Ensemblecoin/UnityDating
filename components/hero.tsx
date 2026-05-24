@@ -52,7 +52,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 onClick={scrollToForm}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 text-lg font-semibold shadow-xl shadow-primary/30"
+                className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 text-lg font-semibold shadow-xl shadow-primary/30"
               >
                 Start Your Journey
               </Button>
@@ -60,7 +60,7 @@ export default function Hero() {
                 size="lg" 
                 variant="outline"
                 onClick={scrollToFeatures}
-                className="border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-semibold bg-transparent"
+                className="rounded-full border-2 border-primary text-primary hover:bg-primary/10 px-10 py-7 text-lg font-semibold bg-transparent"
               >
                 Learn More
               </Button>
@@ -106,7 +106,7 @@ export default function Hero() {
       <div className="border-t-2 border-gray-200 bg-card/30 py-20">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-8 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-3xl border border-gray-200 bg-background/60 p-8 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Music className="h-12 w-12 text-primary" />
               </div>
@@ -114,7 +114,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Our algorithm connects you based on shared musical tastes and preferences</p>
             </div>
             
-            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-8 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-3xl border border-gray-200 bg-background/60 p-8 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Globe className="h-12 w-12 text-primary" />
               </div>
@@ -122,7 +122,7 @@ export default function Hero() {
               <p className="text-muted-foreground">Break barriers and discover love beyond borders with our global community</p>
             </div>
             
-            <div className="flex flex-col items-center text-center rounded-xl border border-gray-200 bg-background/60 p-8 shadow-sm">
+            <div className="flex flex-col items-center text-center rounded-3xl border border-gray-200 bg-background/60 p-8 shadow-sm">
               <div className="mb-4 rounded-full bg-primary/10 p-4">
                 <Heart className="h-12 w-12 text-primary" />
               </div>
